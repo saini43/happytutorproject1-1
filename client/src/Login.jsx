@@ -15,24 +15,26 @@ function Login(){
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post(`${serverURL}/login`, { email, password })
-    .then(result => {
-      console.log(result.data)
-      if(result.data == "Success"){
-        navigate('/home') 
-      }
-     
-    })
-  .catch(error => {
-    console.error('Axios Error:', error);
-    if (error.response) {
-      console.error('Server responded with:', error.response.data);
-      console.error('Status code:', error.response.status);
-    } else if (error.request) {
-      console.error('No response received from the server');
-    } else {
-      console.error('Error setting up the request:', error.message);
-    }
-  });
+      .then(result => {
+        console.log(result.data);
+  
+        if (result.data.status === "Success") {
+          const user = result.data.user;
+          const userRole = user?.role;
+  
+          if (userRole === "admin") {
+            navigate('/upload');
+          } else {
+            navigate('/home');
+          }
+        } else {
+          console.error('Login failed:', result.data.status);
+        }
+      })
+      .catch(error => {
+        console.error('Axios Error:', error);
+        // Handle other errors (e.g., network error, server error)
+      });
   };
 
   return (
