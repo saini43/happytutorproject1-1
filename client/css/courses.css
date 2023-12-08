@@ -1,0 +1,90 @@
+.course_hero{
+    padding: 5rem;
+    text-align: center;
+    align-items: center;
+}
+a{
+    text-decoration: none !important;
+}
+
+
+/*Form*/
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+#search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    background-color:#198754;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+#search-button:hover {
+    background-color:#198754;
+    
+}
+
+/*tutors*/
+.Tutors_near .row{
+    gap: 5rem;
+    
+}
+
+.Tutors_near h6{
+    color:#777;
+}
+
+.Tutors_near i{
+    color:rgb(245, 245, 26);
+
+}
+
+
+
+
+.shadow{
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+}
+
+.shadow p{
+    border-bottom: 1px solid #777;
+}
+
+/*Info*/
+.info .container{
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+} 
+
+/*Partners*/
+
+.partners{
+
+    padding: 3rem;
+    
+}
+.partners .row{
+    justify-content: space-around;
+}
+
+.partners .row .part{
+    height: 3rem;
+    filter: brightness(0);
+    opacity: 50%;
+    
+}
